@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="jQuery Slideshow">
+		<title>jQuery Slideshow</title>
+		<link rel="stylesheet" href="../dist/slideshow.css" />
+		<script src="vendor/jquery/dist/jquery.min.js"></script>
+		<script src="../dist/slideshow.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('button').on('click', function() {
+					$('.demo').toggleClass('hidden');
+				});
+
+				var slideshow = new Slideshow({
+					id : 'demo'
+				});
+			});
+		</script>
+		<style type="text/css">
+			.slideshow.loading {
+				padding: 50px 0;
+				background: url(img/loader.gif) no-repeat center center;
+				background-color: #eee;
+			}
+
+			.slideshow.loading > * {
+				display: none;
+			}
+
+			.hidden {
+				display: none;
+			}
+
+			.demo__button {
+				font-size: 1em;
+				margin: 0 0 1em 0;
+				background: #ccc;
+				padding: 0.2em;
+			}
+
+			.slideshow .slide figure {
+				margin: 0;
+			}
+
+			.slideshow .slide figure img {
+				width: 100%;
+			}
+
+			@media (min-width: 600px) {
+				.slideshow {
+					width: 50%;
+				}
+			}
+
+			/***** slideshow tabs ******/
+			.slideshow .slideTabs {
+				text-align: center;
+			}
+
+			.slideshow .slideTabs a {
+				padding: 10px;
+				margin: 0 5px;
+				line-height: 2em;
+				background: url(img/dot_grey_small.png) no-repeat center center;
+				opacity: 1;
+			}
+
+			.slideshow .slideTabs a.selected {
+				background-image: url(img/dot_blue_small.png);
+			}
+
+			/***** slideshow buttons *****/
+			.slideshow .prev,
+			.slideshow .next {
+				text-decoration: underline;
+				cursor: pointer;
+				position: absolute;
+				z-index: 100;
+				padding: 0 3%;
+				top: calc(50% - 20px); /* next/prev buttons are 40px high by default */
+			}
+
+			.slideshow .prev {
+				left: 0;
+			}
+
+			.slideshow .next {
+				right: 0;
+			}
+
+			.slideshow .next.disabled,
+			.slideshow .prev.disabled {
+				cursor: default;
+				opacity: 0.3;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Hidden Slideshow</h1>
+		<p>This example shows that slideshow can be instantiated even if it's hidden or inside a hidden element. In such cases, slideshow internally delays the initialization until it's displayed. Same technique is used to resize slideshow when it's hidden. Supported only in latest version of all browsers.</p>
+		<button class="demo__button">Toggle Display of Slideshow</button>
+		<div class="hidden demo">
+			<div id="demo" class="slideshow">
+			Slide <span class="slideNumber"></span> of <span class="slidesCount"></span>
+			<div class="wrapper">
+				<img class="next" width="5%" src="img/arrow_right.svg" alt="Next" />
+				<img class="prev" width="5%" src="img/arrow_left.svg" alt="Previous" />
+				<div class="slides">
+					<div class="slide">
+						<figure>
+							<img src="images/2.jpg" />
+							<figcaption>lorem ipsum dolor ist</figcaption>
+						</figure>
+					</div>
+					<div class="slide">
+						<figure>
+							<img src="images/3.jpg" />
+							<figcaption>Lorem Ipsum</figcaption>
+						</figure>
+					</div>
+					<div class="slide">
+						<figure>
+							<img src="images/4.jpg" />
+							<figcaption>Lorem ipsum dolor ist mutus nomen dedit cocis</figcaption>
+						</figure>
+					</div>
+				</div>
+			</div>
+			<div class="slideTabs"></div>
+		</div>
+	</div>
+	</body>
+</html>

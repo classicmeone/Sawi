@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>School Management Websits</title>
+<link rel="stylesheet" type="text/css" href="{% static 'Sawi/style.css' %}" />
+
+</head>
+<body>
+<div id="header">
+	<div class="top"> <img src="{% static 'Sawi/images/logo.png'%}" /> </div>
+	<div class="menu">
+     <ul>
+     <li> Home </li>
+     <li> About Us </li>
+     <li> Contact </li>
+     <li> Program </li>
+     <li> Event </li>
+     <li> Gallery </li>
+     <li> Admission </li>
+     </ul>
+	</div>
+
+</div>
+Welcome to Sawi School Websites
+
+<h1> {{ message }} </h1>
+
+</body>

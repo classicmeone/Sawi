@@ -1,0 +1,190 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"background",
+				"background-color"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Michaelsegun/Documents/DjangoMYSQL/Shopinum/Sawi/static/Sawi/css/style.css",
+		"/C/Users/Michaelsegun/Documents/DjangoMYSQL/Shopinum/Sawi/templates/Sawi/registration/login.html",
+		"/C/Users/Michaelsegun/Documents/Django/Login/Poll/templates/Poll/index.html",
+		"/C/Users/Michaelsegun/Documents/DjangoMYSQL/Shopinum/Sawi/templates/Sawi/randomPHP",
+		"/C/Users/Michaelsegun/Documents/DjangoMYSQL/Shopinum/Sawi/static/Sawi/js/sliderTest.html",
+		"/C/Users/Michaelsegun/Documents/DjangoMYSQL/Shopinum/Sawi/static/Slider/woocommerce-FlexSlider-2.7.0-0-g91e323d/woocommerce-FlexSlider-91e323d/demo/basic-slider-with-caption.html",
+		"/C/Users/Michaelsegun/Documents/DjangoMYSQL/Shopinum/Sawi/static/Slider/woocommerce-FlexSlider-2.7.0-0-g91e323d/woocommerce-FlexSlider-91e323d/demo/sliderTest.html",
+		"/C/Users/Michaelsegun/Documents/DjangoMYSQL/Shopinum/Sawi/static/Sawi/style.css",
+		"/C/Users/Michaelsegun/Documents/DjangoMYSQL/Shopinum/Sawi/static/Sawi/js/ajSlider.js",
+		"/C/Users/Michaelsegun/Documents/DjangoMYSQL/Shopinum/Sawi/static/Sawi/css/ie6.css",
+		"/C/Users/Michaelsegun/Documents/DjangoMYSQL/Shopinum/Sawi/static/Sawi/css/reset.css",
+		"/C/Users/Michaelsegun/Documents/DjangoMYSQL/Shopinum/Sawi/static/Sawi/js/cufon-replace.js",
+		"/C/Users/Michaelsegun/Documents/DjangoMYSQL/Shopinum/Sawi/static/Sawi/js/cufon-yui.js",
+		"/C/Users/Michaelsegun/Documents/DjangoMYSQL/Shopinum/Sawi/static/Sawi/js/html5.js",
+		"/C/Users/Michaelsegun/Documents/DjangoMYSQL/Shopinum/Sawi/static/Sawi/js/ie_png.js",
+		"/C/Users/Michaelsegun/Documents/DjangoMYSQL/Shopinum/Sawi/static/Sawi/js/script.js",
+		"/C/Users/Michaelsegun/Documents/DjangoMYSQL/Shopinum/Sawi/templates/Sawi/index.html",
+		"/C/Users/Michaelsegun/Documents/DjangoMYSQL/New folder/BS Education Free Website Template - Free-CSS.com (1)/bs-education/index.html",
+		"/C/Users/Michaelsegun/Documents/Django/Login/Sister/templates/Sister/userpage.html",
+		"/C/Users/Michaelsegun/Documents/Django/Login/Sister/templates/dashboard.html",
+		"/C/Users/Michaelsegun/Documents/DjangoMYSQL/Shopinum/Sawi/templates/Sawi/login.html",
+		"/C/Users/Michaelsegun/Documents/Django/Login/Sister/templates/userpage.html"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "models.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="jQuery Slideshow">
+		<title>jQuery Slideshow</title>
+		<link rel="stylesheet" href="../dist/slideshow.css" />
+		<script src="vendor/jquery/dist/jquery.min.js"></script>
+		<script src="../dist/slideshow.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var slideshow = new Slideshow({
+					id : 'demo',
+					loop: true
+				});
+			});
+		</script>
+		<style type="text/css">
+			.slideshow .slide figure {
+				margin: 0;
+			}
+
+			.slideshow .slide figure img {
+				width: 100%;
+			}
+
+			@media (min-width: 600px) {
+				.slideshow {
+					width: 50%;
+				}
+			}
+
+			.slideshow .prev,
+			.slideshow .next {
+				padding: 5px 10px;
+				margin: 0 5px 10px 0;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Responsive slideshow (minimal demo)</h1>
+		<div id="demo" class="slideshow">
+			<div class="wrapper">
+				<button class="prev">Previous Slide</button>
+				<button class="next">Next Slide</button>
+				<div class="slides">
+					<div class="slide">
+						<figure>
+							<img src="images/1.jpg" />
+							<figcaption>Slide 1 lorem ipsum dolor ist</figcaption>
+						</figure>
+					</div>
+					<div class="slide">
+						<figure>
+							<img src="images/2.jpg" />
+							<figcaption>Slide 2 Lorem Ipsum</figcaption>
+						</figure>
+					</div>
+					<div class="slide">
+						<figure>
+							<img src="images/3.jpg" />
+							<figcaption>Slide 3 Lorem ipsum dolor ist mutus nomen dedit cocis</figcaption>
+						</figure>
+					</div>
+					<div class="slide">
+						<figure>
+							<img src="images/4.jpg" />
+							<figcaption>Slide 4 lorem ipsum dolor ist</figcaption>
+						</figure>
+					</div>
+					<div class="slide">
+						<figure>
+							<img src="images/5.jpg" />
+							<figcaption>Slide 5 Lorem Ipsum</figcaption>
+						</figure>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

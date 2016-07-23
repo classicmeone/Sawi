@@ -1,0 +1,160 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> {{ page_title }}</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="{% static 'Sawi/css/reset.css' %}" type="text/css" media="all">
+<link rel="stylesheet" href="{% static 'Sawi/css/style.css' %}" type="text/css" media="all">
+<script type="text/javascript" src="{% static 'Sawi/js/jquery-1.4.2.min.js' %}" ></script>
+<script type="text/javascript" src="{% static 'Sawi/js/cufon-yui.js' %}"></script>
+<script type="text/javascript" src="{% static 'Sawi/js/cufon-replace.js' %}"></script>
+<script type="text/javascript" src="{% static 'Sawi/js/Myriad_Pro_300.font.js' %}"></script>
+<script type="text/javascript" src="{% static 'Sawi/js/Myriad_Pro_400.font.js' %}"></script>
+<script type="text/javascript" src="{% static 'Sawi/js/script.js' %}"></script>
+<script src="{% static 'Sawi/js/jquery-1.12.0.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'Sawi/js/ajSlider.js' %}"></script>
+<script>
+
+ $(document).ready(function() {  
+   
+}); 
+
+</script>
+
+<!--[if lt IE 7]>
+<link rel="stylesheet" href="{% static 'Sawi/css/ie6.css' %}" type="text/css" media="screen">
+<script type="text/javascript" src="{% static 'Sawi/js/ie_png.js' %}"></script>
+<script type="text/javascript">ie_png.fix('.png, footer, header nav ul li a, .nav-bg, .list li img');</script>
+<![endif]-->
+<!--[if lt IE 9]><script type="text/javascript" src="{% static 'Sawi/js/html5.js' %}"></script><![endif]-->
+</head>
+<body id="page5">
+<!-- START PAGE SOURCE -->
+<div class="wrap">
+  <header>
+    <div class="container">
+      <h1><a href="#">Student's site</a></h1>
+      <nav>
+        <ul>
+           <li><a href="{% url 'Sawi:index'%}" class="m1">Home Page</a></li>
+          <li><a href="{% url 'Sawi:about'%}" class="m2">About Us</a></li>
+          <li><a href="{% url 'Sawi:admission'%}" class="m3">Admission</a></li>
+          <li><a href="{% url 'Sawi:contact'%}" class="m4">Contact Us</a></li>
+          <li class="last current"><a href="{% url 'Sawi:courses'%}" class="m5">Courses</a></li>
+        </ul>
+      </nav>
+      <form action="#" id="search-form">
+        <fieldset>
+          <div class="rowElem">
+            <input type="text">
+            <a href="#">Search</a></div>
+        </fieldset>
+      </form>
+    </div>
+  </header>
+  <div class="container">
+    <aside>
+      <h3>Categories</h3>
+      <ul class="categories">
+        <li><span><a href="#">Events</a></span></li>
+        <li><span><a href="#">Student Portal</a></span></li>
+        <li><span><a href="#">Faculty</a></span></li>
+        <li><span><a href="{% url 'Sawi:gallery' %}">Gallery</a></span></li>
+        <li><span><a href="#">Administrators</a></span></li>
+        <!-- <li><span><a href="#">Basic Information</a></span></li> -->
+        <li><span><a href="#">Vacancies</a></span></li>
+        <li class="last"><span><a href="#">Academics Calendar</a></span></li>
+      </ul>
+      <form action="#" id="newsletter-form">
+        <fieldset>
+          <div class="rowElem">
+            <h2>Newsletter</h2>
+            <input type="email" value="Enter Your Email Here" onFocus="if(this.value=='Enter Your Email Here'){this.value=''}" onBlur="if(this.value==''){this.value='Enter Your Email Here'}" >
+            <div class="clear"><a href="#" class="fleft">Unsubscribe</a><a href="#" class="fright">Submit</a></div>
+          </div>
+        </fieldset>
+      </form>
+      <h2>Fresh <span>News</span></h2>
+      <ul class="news">
+        <li><strong>June 30, 2010</strong>
+          <h4><a href="#">Sed ut perspiciatis unde</a></h4>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque. </li>
+        <li><strong>June 14, 2010</strong>
+          <h4><a href="#">Neque porro quisquam est</a></h4>
+          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit consequuntur magni. </li>
+        <li><strong>May 29, 2010</strong>
+          <h4><a href="#">Minima veniam, quis nostrum</a></h4>
+          Uis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae. </li>
+      </ul>
+    </aside>
+    <section id="content">
+      <div id="banner">
+        <h2>Professional <span>Online Education <span>Since 1992</span></span></h2>
+      </div>
+      <div class="inside">
+        <h2>Available <span>Courses</span></h2>
+        <div class="course">
+         {% if courses %}
+           {% for course in courses%}
+           <div style="margin-bottom: 20px">
+                <strong> {{course.title}} </strong> <br>
+                <strong> {{course.duration}} </strong> <br>
+                <strong> {{course.description}} </strong>
+              </div>
+           {% endfor %}
+
+         {% endif %}
+        </div>
+        <div class="address">
+          <address>
+          <strong>Zip Code:</strong>50122<br>
+          <strong>Country:</strong>Nigeria<br>
+          <strong>Telephone:</strong>+354 5635600<br>
+          <strong>Fax:</strong>+354 5635610
+          </address>
+          <div class="extra-wrap">
+            <h4>Street Address:</h4>
+            <p>Ajegunle Street, Lagos Nigeria</p>
+          </div>
+        </div>
+        <!--
+        <h2>Contact <span>Form</span></h2>
+        <form id="contacts-form" action="#" method="post">
+          {% csrf_token %}
+          <fieldset>
+            <div class="field">
+              <label>Your Name:</label>
+              <input type="text" value="" name="name" />
+            </div>
+            <div class="field">
+              <label>Your E-mail:</label>
+              <input type="email" name="email" value=""/>
+            </div> -->
+            <!--
+            <div class="field">
+              <label>Your Website:</label>
+              <input type="text" value="" name="sites" />
+            </div> -->
+            <div class="field extra">
+              <label>Your Message:</label>
+              <textarea cols="1" rows="1" name='comment'></textarea>
+            </div>
+            <div class="alignright"><input type="Submit" value="Send Your Message!" /></div>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+  </div>
+</div>
+<footer>
+  <div class="footerlink">
+    <p class="lf">Copyright &copy; 2018 <a href="#">Sofwat</a> - All Rights Reserved</p>
+    <p class="rf">Design by <a href="http://www.simplyclassic.com/">Simply Classic</a></p>
+    <div style="clear:both;"></div>
+  </div>
+</footer>
+<script type="text/javascript"> Cufon.now(); </script>
+<!-- END PAGE SOURCE -->
+</body>
+</html>

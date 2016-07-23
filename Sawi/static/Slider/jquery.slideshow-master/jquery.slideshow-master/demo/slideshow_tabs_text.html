@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="A minimal jQuery slideshow">
+		<title>jquery.slideshow demo</title>
+		<link rel="stylesheet" href="../dist/slideshow.css" />
+		<script src="vendor/jquery/dist/jquery.min.js"></script>
+		<script src="../dist/slideshow.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var slideshow_tabs = new Slideshow({
+					id : 'slideshow_tabs',
+					loop: false
+				});
+			});
+		</script>
+		<style type="text/css">
+			.slideshow .slide {
+				background: #ddd;
+				overflow: auto;
+				padding: 10px 0;
+				margin-right: 20px;
+			}
+
+			.slideshow .slide * {
+				margin: 10px;
+			}
+
+			.slideshow .slideTabs {
+				padding: 10px 0;
+				padding-bottom: 26px;
+			}
+
+			.slideshow .slideTabs a {
+				padding: 2px 19px 3px;
+				line-height: 24px;
+				display: block;
+				float: left;
+				margin-left: 0;
+				margin-right: 10px;
+				background: #ddd;
+				text-decoration: none;
+				color: #000;
+				outline: none;
+			}
+
+			.slideshow .slideTabs a.selected {
+				padding-bottom: 10px;
+				background: #ddd;
+			}
+
+			@media screen and (min-width: 600px) {
+				.slideshow {
+					width: 50%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Slideshow with Text Tabs</h1>
+		<div id="slideshow_tabs" class="slideshow">
+			<div class="slideTabs">
+				<a href="#">lorem</a>
+				<a href="#">ipsum</a>
+				<a href="#">dolor</a>
+			</div>
+			<div class="wrapper">
+				<div class="slides">
+					<div class="slide">
+						<p>Slide1 Mauris lacinia facilisis diam id sagittis. Praesent consectetur nunc purus. Nulla ultricies posuere placerat.</p>
+						<p>Integer dolor est, dignissim in lacinia vitae, facilisis quis felis. Pellentesque suscipit metus id lectus consectetur gravida. Donec a nisl ac augue volutpat dictum vitae non justo. Nunc tempor commodo auctor. Curabitur et enim vel libero euismod dictum vel id purus.</p>
+						<p>Maecenas ac odio metus, id hendrerit elit. Proin at orci erat, a fringilla odio. Maecenas vel ultricies ipsum.</p>
+					</div>
+					<div class="slide">
+						<p>Slide 2 Suspendisse varius nulla non arcu tempor ac bibendum leo fringilla. Suspendisse tempor sodales ante, eu volutpat augue tincidunt dapibus. Mauris lacinia facilisis diam id sagittis. Praesent consectetur nunc purus. Nulla ultricies posuere placerat. Integer dolor est, dignissim in lacinia vitae, facilisis quis felis. Pellentesque suscipit metus id lectus consectetur gravida. Donec a nisl ac augue volutpat dictum vitae non justo. Nunc tempor commodo auctor. Curabitur et enim vel libero euismod dictum vel id purus. Maecenas ac odio metus, id hendrerit elit. Proin at orci erat, a fringilla odio. Maecenas vel ultricies ipsum.</p>
+					</div>
+					<div class="slide">
+						<p>Slide 3 Praesent vitae sapien tellus, eget porttitor arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean magna sapien, varius sit amet fringilla at, dictum vel lacus. Suspendisse varius nulla non arcu tempor ac bibendum leo fringilla. Suspendisse tempor sodales ante, eu volutpat augue tincidunt dapibus. Mauris lacinia facilisis diam id sagittis. Praesent consectetur nunc purus.</p>
+						<p>Nulla ultricies posuere placerat. Integer dolor est, dignissim in lacinia vitae, facilisis quis felis. Pellentesque suscipit metus id lectus consectetur gravida. Donec a nisl ac augue volutpat dictum vitae non justo. Nunc tempor commodo auctor. Curabitur et enim vel libero euismod dictum vel id purus. Maecenas ac odio metus, id hendrerit elit. Proin at orci erat, a fringilla odio. Maecenas vel ultricies ipsum.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

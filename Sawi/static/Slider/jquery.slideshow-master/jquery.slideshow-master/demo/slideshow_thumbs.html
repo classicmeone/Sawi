@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="A minimal jQuery slideshow">
+		<title>jquery.slideshow demo</title>
+		<link rel="stylesheet" href="../dist/slideshow.css" />
+		<script src="vendor/jquery/dist/jquery.min.js"></script>
+		<script src="exernals/imagesloaded.pkgd.min.js"></script>
+		<script src="../dist/slideshow.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('.slideshow .slide').click(function() {
+					var num = $(this).index()+1;
+					slideshow.slideNumber(num);
+				});
+
+				var slideshow = new Slideshow({
+					id: 'slideshow_thumbs',
+					mode: 'thumb_nails',
+					align: 'center',
+					loop: false,
+					startingSlideNumber: 5,
+					transition_delay: 400,
+					multiple_slides: true,
+					callback: function(obj) {
+						var num = obj.slideNumber();
+						var src = $('.slideshow .slide').eq(num-1).find('img').attr('src');
+						src = src.replace('100/75', '500/300');
+						$('.slideshow .fullsize').attr('src', src);
+					}
+				});
+			});
+		</script>
+		<style type="text/css">		
+			.slideshow {
+				height: 150px;
+			}
+
+			.slideshow .wrapper {
+				width: 100%;
+				height: 150px;
+				margin-top: 10px;
+			}
+			.slideshow .slide {
+				border: solid 4px #fff;
+				cursor: pointer;
+			}
+
+			.slideshow .slide img {
+				vertical-align: top;
+				width: 100px;
+			}
+
+			.slideshow .slide.currentSlide {
+				border-color: #ccc;
+			}
+
+			.slideshow .fullsize {
+				width: 100%;
+			}
+
+			@media screen and (min-width: 768px) {
+				.slideshow {
+					width: 50%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Responsive slideshow with thumbnails</h1>
+		<div id="slideshow_thumbs" class="slideshow">
+			<img class="fullsize" src="images/1.jpg" alt="" />
+			<div class="wrapper">
+				<div class="slides">
+					<div class="slide">
+						<img src="images/1.jpg" />
+					</div>
+					<div class="slide">
+						<img src="images/2.jpg" />
+					</div>
+					<div class="slide">
+						<img src="images/3.jpg" />
+					</div>
+					<div class="slide">
+						<img src="images/4.jpg" />
+					</div>
+					<div class="slide">
+						<img src="images/5.jpg" />
+					</div>
+					<div class="slide">
+						<img src="images/1.jpg" />
+					</div>
+					<div class="slide">
+						<img src="images/2.jpg" />
+					</div>
+					<div class="slide">
+						<img src="images/3.jpg" />
+					</div>
+					<div class="slide">
+						<img src="images/4.jpg" />
+					</div>
+					<div class="slide">
+						<img src="images/5.jpg" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

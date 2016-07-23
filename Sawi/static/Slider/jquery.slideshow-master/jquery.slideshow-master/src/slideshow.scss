@@ -1,0 +1,22 @@
+.slideshow {
+	.wrapper {
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+	}
+
+	.wrapper.calculating {
+		height: 0;
+	}
+
+	.slides {
+		position: relative;
+		z-index: 10;
+	}
+
+	.slide {
+		position: relative;
+		float: left;
+		box-sizing: border-box;
+	}
+}

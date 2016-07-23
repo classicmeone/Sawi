@@ -1,0 +1,16 @@
+Slide <span class="slideNumber"></span> of <span class="slidesCount"></span>
+<div class="wrapper">
+	<img class="next" width="5%" src="img/arrow_right.svg" alt="Next" />
+	<img class="prev" width="5%" src="img/arrow_left.svg" alt="Previous" />
+	<div class="slides">
+		{{#each slides}}
+			<div class="slide">
+				<figure>
+					<img src="{{url}}" alt="{{caption}}" />
+					<figcaption>{{caption}}</figcaption>
+				</figure>
+			</div>
+		{{/each}}
+	</div>
+</div>
+<div class="slideTabs"></div>

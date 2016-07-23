@@ -1,0 +1,47 @@
+{% load static %}
+{% if alerts %}
+<script>
+alert("Thank you for trusting us")
+location.href = "{% url 'Sawi:index' %}"
+</script>
+{% endif %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>{{ page_title }}</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="{% static 'Sawi/css/reset.css' %}" type="text/css" media="all">
+<link rel="stylesheet" href="{% static 'Sawi/css/style.css' %}" type="text/css" media="all">
+<script type="text/javascript" src="{% static 'Sawi/js/jquery-1.4.2.min.js' %}" ></script>
+<script type="text/javascript" src="{% static 'Sawi/js/cufon-yui.js' %}"></script>
+<script type="text/javascript" src="{% static 'Sawi/js/cufon-replace.js' %}"></script>
+<script type="text/javascript" src="{% static 'Sawi/js/Myriad_Pro_300.font.js' %}"></script>
+<script type="text/javascript" src="{% static 'Sawi/js/Myriad_Pro_400.font.js' %}"></script>
+<script type="text/javascript" src="{% static 'Sawi/js/script.js' %}"></script>
+<script src="{% static 'Sawi/js/jquery-1.12.0.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'Sawi/js/ajSlider.js' %}"></script>
+<head>
+	<title> Login Page </title>
+</head>
+<body>
+<h3> Login Page </h3>
+<div>
+      <form method="POST" action="">
+        {% csrf_token %}
+        { # Django comment #}
+        <table>
+         <tr>
+         <td> Username </td> <td> <input type="text" name="uname" size="20" /> </td>
+         </tr>
+         <tr>
+         <td> Password </td> <td> <input type="password" name="pass" size="20" /> </td>
+         </tr>
+         <tr>
+         <td> <input type="reset" name="res" size="20" value="Reset" /> </td> <td> <input type="submit" name="sub" size="20" value="Login" /> </td>
+         </tr>
+        </table>
+
+      </form>
+</div>
+</body>
+</html>

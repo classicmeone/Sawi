@@ -1,0 +1,10 @@
+body {
+       background-color: green;
+}
+.menu {
+
+        list-style: inline;
+        
+
+}
+li a { color:green}
